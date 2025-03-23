@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion.ink</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Fashion.ink Logo" id="site-logo">
+        </div>
+        <h1>Fashion.ink</h1>
+        <nav>
+            <input type="text" id="search-bar" placeholder="Search for products...">
+            <a href="index.html"><img src="home-icon.png" alt="Home" class="nav-icon"></a>
+            <a href="cart.html"><img src="cart-icon.png" alt="Cart" class="nav-icon"> (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="product-list">
+            <!-- 15 Products with placeholders for descriptions -->
+            <script>
+                const products = [
+                    { name: "Product 1", price: 10, img: "product1.jpg", rating: "⭐⭐⭐⭐☆ (4.5/5)" },
+                    { name: "Product 2", price: 20, img: "product2.jpg", rating: "⭐⭐⭐⭐⭐ (5/5)" },
+                    { name: "Product 3", price: 15, img: "product3.jpg", rating: "⭐⭐⭐⭐☆ (4.2/5)" },
+                    { name: "Product 4", price: 25, img: "product4.jpg", rating: "⭐⭐⭐⭐⭐ (5/5)" },
+                    { name: "Product 5", price: 30, img: "product5.jpg", rating: "⭐⭐⭐⭐☆ (4.6/5)" },
+                    { name: "Product 6", price: 18, img: "product6.jpg", rating: "⭐⭐⭐⭐ (4/5)" },
+                    { name: "Product 7", price: 22, img: "product7.jpg", rating: "⭐⭐⭐⭐⭐ (5/5)" },
+                    { name: "Product 8", price: 12, img: "product8.jpg", rating: "⭐⭐⭐⭐☆ (4.1/5)" },
+                    { name: "Product 9", price: 35, img: "product9.jpg", rating: "⭐⭐⭐⭐⭐ (5/5)" },
+                    { name: "Product 10", price: 40, img: "product10.jpg", rating: "⭐⭐⭐⭐☆ (4.7/5)" },
+                    { name: "Product 11", price: 28, img: "product11.jpg", rating: "⭐⭐⭐⭐⭐ (5/5)" },
+                    { name: "Product 12", price: 33, img: "product12.jpg", rating: "⭐⭐⭐⭐☆ (4.5/5)" },
+                    { name: "Product 13", price: 27, img: "product13.jpg", rating: "⭐⭐⭐⭐ (4.3/5)" },
+                    { name: "Product 14", price: 19, img: "product14.jpg", rating: "⭐⭐⭐⭐⭐ (5/5)" },
+                    { name: "Product 15", price: 45, img: "product15.jpg", rating: "⭐⭐⭐⭐☆ (4.9/5)" }
+                ];
+
+                products.forEach((product) => {
+                    document.write(`
+                        <div class="product">
+                            <img src="${product.img}" alt="${product.name}">
+                            <h2>${product.name}</h2>
+                            <p>$${product.price}</p>
+                            <p class="review">${product.rating}</p>
+                            <button onclick="addToCart('${product.name}', ${product.price}, '${product.img}')">Add to Cart</button>
+                        </div>
+                    `);
+                });
+            </script>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fashion.ink. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            document.getElementById("cart-count").innerText = cart.length;
+        }
+
+        function addToCart(name, price, image) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push({ name, price, image });
+            localStorage.setItem("cart", JSON.stringify(cart));
+            updateCartCount();
+        }
+
+        document.addEventListener("DOMContentLoaded", updateCartCount);
+    </script>
+</body>
+</html>
+
