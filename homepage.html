@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Your Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background: #000000;
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff6600;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://source.unsplash.com/1600x600/?shopping') no-repeat center center/cover;
+            color: rgb(7, 7, 7);
+            padding: 150px 20px;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #ff6600;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #e65c00;
+        }
+
+        /* Categories */
+        .categories {
+            padding: 50px 20px;
+        }
+
+        .categories h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .category-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .category-box {
+            width: 180px;
+            height: 120px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Fashion.ink Logo" id="site-logo">
+        </div>
+        <h1>ShopEase</h1>
+        <nav>
+            <input type="text" id="search-bar" placeholder="Search for products...">
+            <a href="homepage.html"><img src="img/home.png" alt="Home" class="nav-icon"></a>
+            <a href="product.html"><img src="img/shop.png" alt="Products" class="nav-icon"></a>
+            <a href="help&support.html"><img src="img/help.png" alt="Help" class="nav-icon"></a>
+            <a href="cart.html"><img src="img/cart.png" alt="Cart" class="nav-icon"> (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+        <h2>Welcome to ShopEase</h2>
+        <p>Find the best products at unbeatable prices!</p>
+        <a href="product.html" class="btn">Shop Now</a>
+    </section>
+
+    <section class="categories">
+        <h2>Shop by Category</h2>
+        <div class="category-container">
+            <div class="category-box">Electronics</div>
+            <div class="category-box">Clothing</div>
+            <div class="category-box">Home & Kitchen</div>
+            <div class="category-box">Beauty & Health</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ShopEase. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

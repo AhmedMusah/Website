@@ -9,14 +9,15 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="logo.png" alt="Fashion.ink Logo" id="site-logo">
+            <img src="img/logo.png" alt="Fashion.ink Logo" id="site-logo">
         </div>
-        <h1>Fashion.ink</h1>
+        <h1>ShopEase</h1>
         <nav>
             <input type="text" id="search-bar" placeholder="Search for products...">
-            <a href="product.html"><img src="home-icon.png" alt="Home" class="nav-icon"></a>
-            <a href="help&support.html"><img src="home-icon.png" alt="Help" class="nav-icon"></a>
-            <a href="cart.html"><img src="cart-icon.png" alt="Cart" class="nav-icon"> (<span id="cart-count">0</span>)</a>
+            <a href="homepage.html"><img src="img/home.png" alt="Home" class="nav-icon"></a>
+            <a href="product.html"><img src="img/shop.png" alt="Products" class="nav-icon"></a>
+            <a href="help&support.html"><img src="img/help.png" alt="Help" class="nav-icon"></a>
+            <a href="cart.html"><img src="img/cart.png" alt="Cart" class="nav-icon"> (<span id="cart-count">0</span>)</a>
         </nav>
     </header>
 
@@ -25,21 +26,21 @@
             <!-- 15 Products with placeholders for descriptions -->
             <script>
                 const products = [
-                    { name: "Product 1", price: 10, img: "product1.jpg", rating: "⭐⭐⭐⭐☆ (4.5/5)" },
-                    { name: "Product 2", price: 20, img: "product2.jpg", rating: "⭐⭐⭐⭐⭐ (5/5)" },
-                    { name: "Product 3", price: 15, img: "product3.jpg", rating: "⭐⭐⭐⭐☆ (4.2/5)" },
-                    { name: "Product 4", price: 25, img: "product4.jpg", rating: "⭐⭐⭐⭐⭐ (5/5)" },
-                    { name: "Product 5", price: 30, img: "product5.jpg", rating: "⭐⭐⭐⭐☆ (4.6/5)" },
-                    { name: "Product 6", price: 18, img: "product6.jpg", rating: "⭐⭐⭐⭐ (4/5)" },
-                    { name: "Product 7", price: 22, img: "product7.jpg", rating: "⭐⭐⭐⭐⭐ (5/5)" },
-                    { name: "Product 8", price: 12, img: "product8.jpg", rating: "⭐⭐⭐⭐☆ (4.1/5)" },
-                    { name: "Product 9", price: 35, img: "product9.jpg", rating: "⭐⭐⭐⭐⭐ (5/5)" },
-                    { name: "Product 10", price: 40, img: "product10.jpg", rating: "⭐⭐⭐⭐☆ (4.7/5)" },
-                    { name: "Product 11", price: 28, img: "product11.jpg", rating: "⭐⭐⭐⭐⭐ (5/5)" },
-                    { name: "Product 12", price: 33, img: "product12.jpg", rating: "⭐⭐⭐⭐☆ (4.5/5)" },
-                    { name: "Product 13", price: 27, img: "product13.jpg", rating: "⭐⭐⭐⭐ (4.3/5)" },
-                    { name: "Product 14", price: 19, img: "product14.jpg", rating: "⭐⭐⭐⭐⭐ (5/5)" },
-                    { name: "Product 15", price: 45, img: "product15.jpg", rating: "⭐⭐⭐⭐☆ (4.9/5)" }
+                    { name: "Nike pink lace-ups", price: 10, img: "img/S1.jpg", rating: "⭐⭐⭐⭐☆ (4.5/5)" },
+                    { name: "Round Glasses", price: 20, img: "img/G2.jpg", rating: "⭐⭐⭐⭐⭐ (5/5)" },
+                    { name: "Brown Bear Hoodie", price: 15, img: "img/H2.jpg", rating: "⭐⭐⭐⭐☆ (4.2/5)" },
+                    { name: "Nike brown lace-ups", price: 25, img: "img/S5.jpg", rating: "⭐⭐⭐⭐⭐ (5/5)" },
+                    { name: "Hex Glasses", price: 30, img: "img/G1.jpg", rating: "⭐⭐⭐⭐☆ (4.6/5)" },
+                    { name: "Black Dress", price: 18, img: "img/D1.jpg", rating: "⭐⭐⭐⭐ (4/5)" },
+                    { name: "Nike grey lace-ups", price: 22, img: "img/S2.jpg", rating: "⭐⭐⭐⭐⭐ (5/5)" },
+                    { name: "Black Hoodie", price: 12, img: "img/H1.jpg", rating: "⭐⭐⭐⭐☆ (4.1/5)" },
+                    { name: "Brown Dress", price: 35, img: "img/D2.jpg", rating: "⭐⭐⭐⭐⭐ (5/5)" },
+                    { name: "Nike red lace-ups", price: 40, img: "img/S3.jpg", rating: "⭐⭐⭐⭐☆ (4.7/5)" },
+                    { name: "White Hoodie", price: 28, img: "img/HW.jpg", rating: "⭐⭐⭐⭐⭐ (5/5)" },
+                    { name: "Blue Dress", price: 33, img: "img/D3.jpg", rating: "⭐⭐⭐⭐☆ (4.5/5)" },
+                    { name: "Nike green executive", price: 27, img: "img/S4.jpg", rating: "⭐⭐⭐⭐ (4.3/5)" },
+                    { name: "Twin Hoodies", price: 19, img: "img/HT.jpg", rating: "⭐⭐⭐⭐⭐ (5/5)" },
+                    { name: "Pink sweater", price: 45, img: "img/HP.jpg", rating: "⭐⭐⭐⭐☆ (4.9/5)" }
                 ];
 
                 products.forEach((product) => {
@@ -58,7 +59,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Fashion.ink. All rights reserved.</p>
+        <p>&copy; 2025 ShopEase. All rights reserved.</p>
     </footer>
 
     <script>
@@ -78,4 +79,3 @@
     </script>
 </body>
 </html>
-

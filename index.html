@@ -36,7 +36,8 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
- button {
+
+        button {
             width: 100%;
             padding: 10px;
             background-color: #007bff;
@@ -57,22 +58,40 @@
             font-size: 14px;
             color: #777;
         }
+
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
     <h2>Sign Up</h2>
-    <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="password" placeholder="Password" required>
-        <a href="product.html"><button type="submit">Create Account</button></a>
+    <form id="signup-form">
+        <input type="text" id="full-name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Create Account</button>
     </form>
     <div class="footer">
         <p>Already have an account? <a href="#">Log In</a></p>
     </div>
 </div>
+
+<script>
+    document.getElementById("signup-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent actual form submission
+        
+        // Redirect to product.html
+        window.location.href = "product.html";
+    });
+</script>
 
 </body>
 </html>
